@@ -1,0 +1,8 @@
+fr:
+  errors:
+    messages:
+      record_invalid: Enregistrement invalide
+  profiles:
+    update:
+      failure: Echec de la mise à jour
+      success: Le profil a bien été mis à jour

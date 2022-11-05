@@ -1,0 +1,11 @@
+fr:
+  nav:
+    coins: Mes cryptos
+    config: Configuration
+    edit_user: Mon compte
+    home: Accueil
+    import: Import
+    logout: Déconnexion
+    overview: Vue globale
+    snapshots: Historique
+    wallets: Mes Plateformes
