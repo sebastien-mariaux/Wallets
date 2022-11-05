@@ -1,0 +1,6 @@
+<%= form_for  [@coin, transaction], method: method, 
+              data: {"transaction-form-target" => "form", 
+                     "action" => "ajax:error->transaction-form#handleError ajax:success->transaction-form#handleSuccess"}, 
+              remote: true, local: false do |form| %>
+  <%= render 'inline_form_fields', form: form %>
+<% end %>

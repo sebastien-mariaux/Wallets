@@ -1,0 +1,38 @@
+  <div class='buttons'>
+    <%= button_tag "Mettre à jour la liste des Cryptos", 
+                   class:"btn btn-outline-info btn-sm",
+                   data: {controller: 'button',
+                          'button-url-value' => list_api_index_path,
+                          'action': 'click->button#load' } do %>
+      <span class="spinner hidden spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      <span> <%= t '.update_list' %> </span>
+    <%end %>
+
+    <%= button_tag "Mettre à jour les prix", 
+                   class:"btn btn-outline-info btn-sm",
+                   data: {controller: 'button',
+                          'button-url-value' => prices_api_index_path,
+                          'action': 'click->button#load' } do %>
+      <span class="spinner hidden spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      <span> <%= t('.update_prices') %> </span>
+    <% end %>
+
+    <%= button_tag "Snapshot", 
+                   class:"btn btn-outline-info btn-sm",
+                   data: {controller: 'button',
+                          'button-url-value' => request_snap_snapshots_path,
+                          'action': 'click->button#load' } do %>
+      <span class="spinner hidden spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      <span> <%= t('.snapshot') %> </span>
+    <% end %>
+
+    <%= button_tag "Backup", 
+                   class:"btn btn-outline-info btn-sm",
+                   style: 'display: none',
+                   data: {controller: 'button',
+                          'button-url-value' => export_backup_path,
+                          'action': 'click->button#load' } do %>
+      <span class="spinner hidden spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      <span> <%= t '.backup' %> </span>
+    <% end %>
+  </div>

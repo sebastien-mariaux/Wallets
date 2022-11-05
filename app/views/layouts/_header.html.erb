@@ -1,0 +1,35 @@
+<div class="disclaimer">
+/!\ VERSION DE DEMO, POUVANT PRESENTER DES BUGS ET NON SECURISEE. NE PAS UTILISER AVEC DES DONNEES REELLES /!\
+</div>
+<nav>
+  <div class=submenu>
+      <div class='item'>
+        <%= link_to t('nav.home'), root_path %>
+      </div>
+    <% if user_signed_in?%>
+      <div class='item'>
+        <%= link_to t('nav.overview'), root_path %>
+      </div>
+      <div class='item'>
+        <%= link_to t('nav.wallets'), wallets_path %>
+      </div>
+      <div class='item'>
+        <%= link_to t('nav.coins'), coins_path %>
+      </div>
+      <div class='item'>
+        <%= link_to t('nav.snapshots'), snapshots_path %>
+      </div>
+    <% end %>
+  </div>
+  <div class='submenu'>
+    <% if user_signed_in?%>
+      <div class='item'>
+        <%= link_to t('nav.edit_user'), edit_profile_path %>
+      </div>
+      <div class='item'>
+        <%= link_to t('nav.logout'), destroy_user_session_path, method: :delete %>
+      </div>
+    <% end %>
+  </div>
+
+</nav>

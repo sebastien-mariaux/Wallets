@@ -1,0 +1,11 @@
+<% coin_total = get_coin_total(@coins, coin_id, currency) %>
+
+<td  data-controller="template" 
+     data-template-url-value="<%= total_coin_path(coin_id, currency: currency) %>"
+     data-template-coin-value="<%= coin_id %>"
+     data-template-wallet-value=""
+     data-action="update-quantity@window->template#reload update-data@window->template#reload"
+     >
+  <div class='text-end' data-template-target="template"><%= coin_total %></div>
+</td>
+

@@ -1,0 +1,8 @@
+<div class='home'>
+  <h1><%= t '.title' %></h1>
+  <% if @wallets.present? && @coins.present?%>
+    <%= render 'home_content' %>
+  <% else %>
+    <%= render 'home_not_ready' %>
+  <% end %>
+</div>

@@ -1,0 +1,36 @@
+<%= form_for @coin, url: url, method: method do |form| %>
+  <div class="mb-3" 
+      data-controller='search-dropdown'
+      data-search-dropdown-url-value="<%= search_gecko_coins_path %>">
+    <%= form.label :gecko_coin, class: "form-label" %>
+    <%= text_field_tag :gecko_coin, '', class: "form-control", 
+                       data: {action: "input->search-dropdown#load"} %>
+    <div data-search-dropdown-target='results'></div>
+    <%#= form.hidden_field :gecko_coin_id,
+                          data: {'search-dropdown-target' => 'input'} %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :coingecko, class: "form-label" %>
+    <%= form.collection_select :gecko_coin_id, GeckoCoin.all, :id, :name, {}, 
+                               data: {'trade-form-target'=>'walletField' },
+                               class: "search form-select form-select-sm" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :name, class: "form-label" %>
+    <%= form.text_field :name, required: true, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :code, class: "form-label" %>
+    <%= form.text_field :code, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :reference_price, class: "form-label" %>
+    <%= form.text_field :reference_price, class: "form-control" %>
+  </div>
+  <div class="mb-3 form-check">
+    <%= form.check_box :hide, class: "form-check-input" %>
+    <%= form.label :hide, class: "form-check-label" %>
+  </div>
+
+  <%= form.submit action, class: "btn btn-primary" %>
+<% end %>

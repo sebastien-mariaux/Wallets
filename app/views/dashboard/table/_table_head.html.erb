@@ -1,0 +1,40 @@
+    <thead>
+      <tr>
+        <th scope='col'>
+          <%= render 'toggle_visible_coins' %>
+        </th>
+
+        <th scope='col' data-bs-toggle="tooltip" data-bs-placement="top"
+            title="<%= @main_currency.upcase %>"><%= t('.price') %></th>
+
+        <th scope='col' data-bs-toggle="tooltip" data-bs-placement="top" 
+            title="<%= @main_currency.upcase %>"><%= t('.ref_price') %></th>
+
+        <th scope='col'><%= t '.delta' %></th>
+
+        <% @wallets.each do |wallet| %>
+          <th scope='col'>
+            <div class='wallet-head'>
+              <%= wallet.name %>
+              <a href='' class='hidden display-hover'>
+              <i class="far fa-eye-slash"></i></a>
+            </div>
+          </th>
+        <% end %>
+
+        <th scope='col'>Total (token)</th>
+
+        <% if current_user.display_main %>
+          <th scope='col'>Total (<%= @main_currency.upcase %>)</th>
+        <% end %>
+
+        <% if current_user.display_secondary %>
+          <th scope='col'>Total (<%= @secondary_currency.upcase %>)</th>
+        <% end %>
+
+        <% if current_user.display_tertiary %>
+          <th scope='col'>Total (<%= @tertiary_currency.upcase %>)</th>
+        <% end %>
+      </tr>
+
+    </thead>

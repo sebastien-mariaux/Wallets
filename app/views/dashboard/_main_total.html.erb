@@ -1,0 +1,11 @@
+<% main_total = get_main_total(current_user, currency) %>
+
+<th scope='row'  data-controller="template" 
+     data-template-url-value="<%= total_coin_wallets_path(currency: currency) %>"
+     data-template-coin-value=""
+     data-template-wallet-value=""
+     data-action="update-quantity@window->template#reload update-data@window->template#reload"
+     >
+  <div class='text-end' data-template-target="template"><%= main_total %></div>
+</th>
+
