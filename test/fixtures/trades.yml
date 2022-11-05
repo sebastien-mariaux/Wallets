@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: trades
+#
+#  id            :uuid             not null, primary key
+#  buy_coin_id   :uuid
+#  sell_coin_id  :uuid
+#  buy_quantity  :decimal(, )
+#  sell_quantity :decimal(, )
+#  date          :date
+#  wallet_id     :uuid
+#  user_id       :uuid
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+
+xrp_busd:
+  buy_coin: :xrp
+  sell_coin: :busd
+  buy_quantity: 100
+  sell_quantity: 110
+  wallet: :binance
+xrp_busd_2:
+  buy_coin: :xrp
+  sell_coin: :busd
+  buy_quantity: 200
+  sell_quantity: 199
+  wallet: :binance
+busd_xrp: 
+  buy_coin: :busd
+  sell_coin: :xrp
+  buy_quantity: 120
+  sell_quantity: 50
+  wallet: :binance

@@ -1,0 +1,65 @@
+# == Schema Information
+#
+# Table name: coin_wallets
+#
+#  id         :uuid             not null, primary key
+#  coin_id    :uuid
+#  wallet_id  :uuid
+#  quantity   :decimal(, )
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  user_id    :uuid
+#
+xrp_binance:
+  coin: xrp
+  wallet: binance
+  quantity: 500
+  user: :seba
+
+btc_binance:
+  coin: btc
+  wallet: binance
+  quantity: 0.12
+  user: :seba
+
+btc_samourai:
+  coin: btc
+  wallet: samourai
+  quantity: 0.2
+  user: :seba
+
+eth_binance:
+  coin: eth
+  wallet: binance
+  quantity: 2.1
+  user: :seba
+
+eth_ledger:
+  coin: eth
+  wallet: ledger
+  quantity: 5.41
+  user: :seba
+
+xrp_coinbase:
+  coin: xrp
+  wallet: coinbase
+  quantity: 207
+  user: :seba
+
+cvx_ledger:
+  coin: cvx
+  wallet: ledger
+  quantity: 25
+  user: :seba
+
+stak_binance:
+  coin: stak
+  wallet: binance
+  quantity: 125896
+  user: :seba
+
+james_btc:
+  coin: btc
+  wallet: james_binance
+  quantity: 5
+  user: :james

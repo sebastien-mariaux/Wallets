@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: wallets
+#
+#  id          :uuid             not null, primary key
+#  name        :string
+#  description :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  user_id     :uuid
+#
+binance:
+  name: Binance
+  user: seba
+coinbase:
+  name: Coinbase
+  user: seba
+samourai:
+  name: Samouraï
+  user: seba
+ledger:
+  name: Ledger
+  user: seba
+james_binance:
+  name: Binance
+  user: james
