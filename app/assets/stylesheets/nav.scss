@@ -1,0 +1,36 @@
+@import 'colors';
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    background-color: $gold;
+
+    .submenu {
+      display: flex;
+    }
+    .item {
+        margin: 0 1em;
+
+        a {
+            text-decoration: none;
+            color: $blue;
+
+            &:hover {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.nav.nav-tabs {
+  border-bottom-color: $fire_red;
+  
+  .nav-link {
+    color: $fire_red;
+    &.active {
+      background-color: $fire_red;
+      color: #fff;
+    }
+  }
+}

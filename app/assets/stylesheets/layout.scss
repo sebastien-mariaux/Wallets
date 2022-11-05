@@ -1,0 +1,87 @@
+@import 'colors';
+
+body {
+  background-color: $white;
+  color: $black;
+
+}
+
+h1 {
+  color: $blue;
+}
+
+.main-container {
+  max-width: 1500px;
+  margin: auto;
+  padding: 1em;
+}
+
+.smaller-container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.user-input {
+  color: $blue;
+}
+
+.buttons {
+  margin: 1em 0;
+}
+
+.selectable {
+  &:hover {
+    background-color: rgb(223, 223, 223);
+    cursor: pointer;
+  }
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+
+#flash{
+  min-width: 500 px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.tab-content {
+  margin-top: 1em;
+}
+
+.icon-link-to {
+  span.icon-button-text {
+    margin-left: 1em;
+  }
+}
+
+.dynamic-field:hover {
+  cursor: pointer;
+}
+
+.segment {
+  position: relative;
+  background: #fff;
+  // -webkit-box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  // box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  margin: 1rem 0;
+  padding: 0.5em;
+  border-radius: 0.28571429rem;
+  border: 1px solid rgba(34,36,38,.15);
+}
+
+.disclaimer {
+  background-color: orangered;
+  color: #fff;
+}
